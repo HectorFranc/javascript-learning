@@ -24,13 +24,13 @@ function changePokeImg(newUrl) {
 }
 
 function changePokeInfo({ name, types }) {
-    POKEINFO__INFO_name.innerHTML = name
+    POKEINFO__INFO_name.innerHTML = name.substr(0, 1).toUpperCase() + name.substr(1)
     POKEINFO__INFO_type.innerHTML = types.reduce((previus, current, i) => {
         let str = previus
         if (i != 0) {
             str += ' | '
         }
-        str += current.type.name
+        str += current.type.name.substr(0, 1).toUpperCase() + current.type.name.substr(1)
         return str
     },'')
 }
