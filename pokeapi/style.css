@@ -15,7 +15,7 @@ main {
 
 /* Search bar */
 .search {
-    width: 80%;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
