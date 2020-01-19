@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Poke-monsters selection</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <main>
+        <section class="search">
+            <input class="search__input" type="text" placeholder="Ingresa el poke-nombre..."> 
+            <button class="search__button" onclick="pokeSearch()">Buscar</button>
+        </section>
+        <section class="pokeinfo">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="#">
+            <div class="pokeinfo__info">
+                <p><span class="pokeinfo__info--title">Name: </span><span class="pokeinfo__info--name">Bulbasaur</span></p>
+                <p><span class="pokeinfo__info--title">Type: </span ><span class="pokeinfo__info--type">Plant</span></p>
+            </div>
+        </section>
+    </main>
     
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

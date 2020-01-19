@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Search bar */
+.search {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search__input {
+    border-radius: 35px;
+    border: 1px solid black;
+    padding: 15px 20px;
+    outline: none;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.search__input::placeholder {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search__button {
+    border-radius: 35px;
+    border: 1px solid black;
+    outline: none;
+    margin-left: 2px;
+    width: 20%;
+    height: 100%;
+    outline: none;
+    background-color: aquamarine;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+.search__button:active {
+    border: 5px inset gray;
+}
+
+/* Poke-info */
+.pokeinfo {
+    height: 70vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    background:khaki;
+    border-radius: 15px;
+}
+
+.pokeinfo img {
+    width: 35vw;
+    max-width: 300px;
+    border: 5px solid black;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    background-color: rgba(179, 179, 179, 0.6);
+}
+.pokeinfo__info{
+    width: 50vw;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 30px;
+    border: 1px solid white;
+    background-color: salmon;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pokeinfo__info p {
+    padding: 5px;
+}
+
+.pokeinfo__info--title {
+    font-weight: bold;
+}
