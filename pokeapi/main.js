@@ -45,8 +45,9 @@ function populatePokeApiValues(pokeName) {
 }
 
 function pokeSearch() {
-    let pokeName = document.getElementsByClassName('search__input')[0].value
-    populatePokeApiValues(pokeName)
+    let search__input = document.getElementsByClassName('search__input')[0]
+    populatePokeApiValues(search__input.value.toLowerCase())
+    search__input.value = ''
     return false;
 }
 
