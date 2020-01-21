@@ -12,6 +12,13 @@ class Juego {
 
     inicializar() {
         btnEmpezar.classList.add('hide')
+        this.level = 1
+        this.colores = {
+            celeste,
+            violeta,
+            naranja,
+            verde
+        }
     }
 
     generarSecuencia() {
