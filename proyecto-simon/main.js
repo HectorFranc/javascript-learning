@@ -14,6 +14,7 @@ class Juego {
 
     inicializar() {
         this.elegirColor = this.elegirColor.bind(this)
+        this.siguienteNivel = this.siguienteNivel.bind(this)
         btnEmpezar.classList.add('hide')
         this.level = 1
         this.colores = {
@@ -84,8 +85,33 @@ class Juego {
 
     }
 
-    elegirColor(ev) {
+    eliminarEventosClick () {
+        this.colores.celeste.removeEventListener('click', this.elegirColor)
+        this.colores.violeta.removeEventListener('click', this.elegirColor)
+        this.colores.naranja.removeEventListener('click', this.elegirColor)
+        this.colores.verde.removeEventListener('click', this.elegirColor)
 
+    }
+
+    elegirColor(ev) {
+        const nombreColor = ev.target.dataset.color
+        const numeroColor = this.transformarColorANumero(nombreColor)
+        this.iluminarColor(nombreColor)
+        if (numeroColor === this.secuencia[this.subnivel]) {
+            this.subnivel++
+
+            if (this.subnivel === this.level) {
+                this.level++
+                this.eliminarEventosClick()
+                if (this.level === (ULTIMO_NIVEL + 1)) {
+                    // Ganar
+                } else {
+                    setTimeout(this.siguienteNivel, 2000)
+                }
+            }
+        } else {
+            // Perder
+        }
     }
 }
 
