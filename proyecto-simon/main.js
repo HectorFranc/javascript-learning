@@ -9,7 +9,7 @@ class Juego {
     constructor() {
         this.inicializar()
         this.generarSecuencia()
-        this.siguienteNivel()
+        setTimeout(this.siguienteNivel, 500)
     }
 
     inicializar() {
@@ -106,7 +106,7 @@ class Juego {
                 if (this.level === (ULTIMO_NIVEL + 1)) {
                     // Ganar
                 } else {
-                    setTimeout(this.siguienteNivel, 2000)
+                    setTimeout(this.siguienteNivel, 1500)
                 }
             }
         } else {
